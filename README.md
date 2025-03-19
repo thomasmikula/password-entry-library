@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Password Entry Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based password entry component built with Vite, TypeScript, Tailwind CSS, and react-hook-form. This library provides a robust and modular password validation form that enforces strong password requirements and offers clear, actionable feedback to users.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Two-Factor Password Entry:** Users must input the password twice to ensure accuracy.
+- **Validation Rules:**
+  - Minimum length of 6 characters.
+  - At least one uppercase letter.
+  - At least one lowercase letter.
+  - At least one numeric digit.
+  - At least one special character from the set `!@#$%^&*()_-+={[}]|:;"'<,>.)`.
+- **User Feedback:** Displays detailed error messages for each validation rule that fails.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**
+- **Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **react-hook-form**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Follow these instructions to set up and run the project locally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [Node.js](https://nodejs.org/en/) (version 14 or later)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Commands
+
+- Run `npm install` to install dependencies.
+- Run `npm run dev` to run the development server.
